@@ -1,0 +1,12 @@
+!!! 5
+%html
+  %head
+    = render "partials/_head.html.haml"
+  %body.nojs
+    #content
+      = render "partials/_header.html.haml"
+      %section{:role => "main"}
+        .container
+          = yield
+    = render "partials/_footer.html.haml"
+    = render "partials/_analytics.html.haml"

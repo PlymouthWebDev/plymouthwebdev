@@ -1,0 +1,59 @@
+.toolbar
+  margin-top: 2em
+  font-size: 0.7em
+  border: 1px solid #ccc
+  @include round_corners(0.5em 0.5em 0 0)
+  @include v-linear_grad(#f0f0f0, #d8d8d8)
+  @include box-shadow("inset 1px 1px 0 rgba(255, 255, 255, 0.3), inset -1px -1px 0 rgba(0, 0, 0, 0.05), 0 -1px 4px rgba(0, 0, 0, 0.05)")
+  height: 1.8em
+  padding: 0.4em 0.4em 0
+  .buttons
+    float: left
+  .title
+    @include round_corners(0.3em)
+    @include box-shadow("inset 1px 1px 0 rgba(255, 255, 255, 0.2), inset -1px -1px 0 rgba(0, 0, 0, 0.03), 0 1px 0 rgba(255, 255, 255, 0.2)")
+    background: white
+    color: #999
+    border: 1px solid #ccc
+    margin-left: 4.3em
+    height: 1.4em
+    padding: 0 0.6em
+  button
+    border: 1px solid #bbb
+    margin: 0
+    padding: 0 0.6em
+    height: 1.5em
+    div
+      background-image: url(/images/nav_buttons.png)
+      background-repeat: no-repeat
+      background-size: 21px
+      width: 9px
+      height: 9px
+    &.prev
+      @include round_corners(0.3em 0 0 0.3em)
+      padding-right: 0.5em
+      div
+        background-position: left center
+    &.next
+      @include round_corners(0 0.3em 0.3em 0)
+      padding-left: 0.5em
+      margin-left: -5px
+      border-left: 1px solid #bbb
+      div
+        background-position: right center
+    @include v-linear_grad(#fff, #ccc)
+    @include box-shadow("inset 1px 1px 0 rgba(255, 255, 255, 0.3), inset -1px -1px 0 rgba(0, 0, 0, 0.03), 0 1px 0 rgba(255, 255, 255, 0.3)")
+
+.window
+  border: 1px solid #bbb
+  position: relative
+  border-top: 0
+  line-height: 0
+  @include box-shadow("0 2px 4px rgba(0, 0, 0, 0.1)")
+  img
+    position: absolute
+    top: 0
+    line-height: 0
+  img:first-child
+    position: static
+    margin-top: 0
