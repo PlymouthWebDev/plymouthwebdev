@@ -3,10 +3,27 @@
   %head
     = render "partials/_head.html.haml"
   %body.nojs
-    #content
-      = render "partials/_header.html.haml"
-      %section{:role => "main"}
-        .container
-          = yield
+    = render "partials/_header.html.haml"
+    %section{ :role => "aside" }
+      .container
+        %ul
+          %li
+            %a{ :href => "/images/photos/IMG_0636.jpg" }
+              %img{ :src => "/images/photos/thumbs/IMG_0636.jpg" }
+          %li
+            %a{ :href => "/images/photos/IMG_0637.jpg" }
+              %img{ :src => "/images/photos/thumbs/IMG_0637.jpg" }
+          %li
+            %a{ :href => "/images/photos/IMG_0638.jpg" }
+              %img{ :src => "/images/photos/thumbs/IMG_0638.jpg" }
+          %li
+            %a{ :href => "/images/photos/IMG_0639.jpg" }
+              %img{ :src => "/images/photos/thumbs/IMG_0639.jpg" }
+          %li
+            %a{ :href => "/images/photos/IMG_0640.jpg" }
+              %img{ :src => "/images/photos/thumbs/IMG_0640.jpg" }
+    %section{ :role => "main" }
+      .container
+        = yield
     = render "partials/_footer.html.haml"
     = render "partials/_analytics.html.haml"
